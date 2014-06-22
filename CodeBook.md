@@ -25,13 +25,13 @@ The original study collected activities data on 30 human subjects (ages from 19-
 
 The script **run_analysis.R** assumes that all the necessary data is in a folder called **UCIHAR** on the working directory. This folder conserves the original structure from the downloaded ZIP file:
 
-features.txt - List of all features.
-train/X_train.txt - Training set.
-train/y_train.txt - Training labels.
-test/X_test.txt - Test set.
-test/y_test.txt - Test labels.
-train/subject_train.txt - Each row identifies the subject who performed the activity for each window sample.
-test/subject_test.txt- Each row identifies the subject who performed the activity for each window sample.
+features.txt - List of all features     
+train/X_train.txt - Training set      
+train/y_train.txt - Training labels     
+test/X_test.txt - Test set     
+test/y_test.txt - Test labels      
+train/subject_train.txt     
+test/subject_test.txt      
 
 
 #### Variables used in the **run_analysis.R** script
@@ -56,7 +56,7 @@ test/subject_test.txt- Each row identifies the subject who performed the activit
 
 #### Variable Naming Choices
 
-Various code styles and naming strategies were discussed on the forums. My assesment was that the variable names **(features$V2)** were sufficiently descriptive and the only thing needed was the elimination of parentheses. To further ensure that the column names will not create problems in R, I used the `make.names` function.
+Various code styles and naming strategies were discussed on the forums. My assesment was that the variable names **(features$V2)** were sufficiently descriptive and the only thing needed was the elimination of parentheses. My personal preference goes to "camel naming" instead of all lowercase variable names, for legibility reasons. To further ensure that the column names will not create problems in R, I used the `make.names` function.
 
 
 #### Output Data
@@ -65,8 +65,8 @@ The tidy dataset was created as a **Samsung_final_tidy_data.txt** file with a `w
 
 The tidy data set contains average measurements of means and standard deviations in the subset of 65 variables (columns) of the original 561:
 
-tBodyAcc.mean.X    
-tBodyAcc.mean.Y    
+tBodyAcc.mean.X        
+tBodyAcc.mean.Y       
 tBodyAcc.mean.Z	
 tBodyAcc.std.X	
 tBodyAcc.std.Y	
@@ -77,57 +77,57 @@ tGravityAcc.mean.Z
 tGravityAcc.std.X	
 tGravityAcc.std.Y	
 tGravityAcc.std.Z	
-tBodyAccJerk.mean.X	
-tBodyAccJerk.mean.Y	
-tBodyAccJerk.mean.Z	
-tBodyAccJerk.std.X	
-tBodyAccJerk.std.Y	
-tBodyAccJerk.std.Z	
+tBodyAccJerk.mean.X    	
+tBodyAccJerk.mean.Y    	
+tBodyAccJerk.mean.Z    	
+tBodyAccJerk.std.X    	
+tBodyAccJerk.std.Y    	
+tBodyAccJerk.std.Z    	
 tBodyGyro.mean.X	
 tBodyGyro.mean.Y	
 tBodyGyro.mean.Z	
-tBodyGyro.std.X	
-tBodyGyro.std.Y	
-tBodyGyro.std.Z	
-tBodyGyroJerk.mean.X	
-tBodyGyroJerk.mean.Y	
-tBodyGyroJerk.mean.Z	
-tBodyGyroJerk.std.X	
-tBodyGyroJerk.std.Y	
-tBodyGyroJerk.std.Z	
+tBodyGyro.std.X   	    
+tBodyGyro.std.Y    	
+tBodyGyro.std.Z    	
+tBodyGyroJerk.mean.X    	
+tBodyGyroJerk.mean.Y    	
+tBodyGyroJerk.mean.Z    	
+tBodyGyroJerk.std.X    	    
+tBodyGyroJerk.std.Y    	
+tBodyGyroJerk.std.Z    	
 tBodyAccMag.mean	
 tBodyAccMag.std	
-tGravityAccMag.mean	
-tGravityAccMag.std	
-tBodyAccJerkMag.mean	
-tBodyAccJerkMag.std	
-tBodyGyroMag.mean	
-tBodyGyroMag.std	
-tBodyGyroJerkMag.mean	
-tBodyGyroJerkMag.std	
-fBodyAcc.mean.X	
-fBodyAcc.mean.Y	
+tGravityAccMag.mean   	
+tGravityAccMag.std   	
+tBodyAccJerkMag.mean    	
+tBodyAccJerkMag.std	   
+tBodyGyroMag.mean    	
+tBodyGyroMag.std    	
+tBodyGyroJerkMag.mean    	
+tBodyGyroJerkMag.std    	
+fBodyAcc.mean.X	   
+fBodyAcc.mean.Y   	
 fBodyAcc.mean.Z	
 fBodyAcc.std.X	
 fBodyAcc.std.Y	
 fBodyAcc.std.Z	
-fBodyAccJerk.mean.X	
-fBodyAccJerk.mean.Y	
-fBodyAccJerk.mean.Z	
-fBodyAccJerk.std.X	
-fBodyAccJerk.std.Y	
-fBodyAccJerk.std.Z	
-fBodyGyro.mean.X	
-fBodyGyro.mean.Y	
-fBodyGyro.mean.Z	
-fBodyGyro.std.X	
-fBodyGyro.std.Y	
-fBodyGyro.std.Z	
-fBodyAccMag.mean	
-fBodyAccMag.std	
-fBodyBodyAccJerkMag.mean	
-fBodyBodyAccJerkMag.std	
-fBodyBodyGyroMag.mean	
-fBodyBodyGyroMag.std	
-fBodyBodyGyroJerkMag.mean	
-fBodyBodyGyroJerkMag.std
+fBodyAccJerk.mean.X    	
+fBodyAccJerk.mean.Y   	
+fBodyAccJerk.mean.Z    	
+fBodyAccJerk.std.X    	
+fBodyAccJerk.std.Y    	
+fBodyAccJerk.std.Z    	
+fBodyGyro.mean.X    	
+fBodyGyro.mean.Y    	
+fBodyGyro.mean.Z    	
+fBodyGyro.std.X    	
+fBodyGyro.std.Y    	
+fBodyGyro.std.Z    	
+fBodyAccMag.mean   	
+fBodyAccMag.std   	
+fBodyBodyAccJerkMag.mean   	
+fBodyBodyAccJerkMag.std	    
+fBodyBodyGyroMag.mean    	
+fBodyBodyGyroMag.std   	
+fBodyBodyGyroJerkMag.mean   	
+fBodyBodyGyroJerkMag.std    

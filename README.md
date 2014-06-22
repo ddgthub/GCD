@@ -21,12 +21,12 @@ http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartpho
 ***
 A series of measurements from 30 subjects while performing 6 different activities were captured, and 561 features (variables) were recorded in the following 6 files:
 
-* 'X_train.txt'  -- (7352 x 561) numerical feature variable vectors
-* 'y_train.txt'  -- (7352 x 1) activity labels, coded numerically
-* 'subject_train.txt' -- (7252 x 1) subject ID labels labels
-* 'X_test.txt'  --  (2947 x 561) numerical feature variable vectors
-* 'y_test.txt' -- (2947 x 1) activity labels, coded numerically
-* 'subject_test.txt' -- (2947 x 1) sujbect ID labels
+* 'X_train.txt'  -- (7352 x 561)
+* 'y_train.txt'  -- (7352 x 1)
+* 'subject_train.txt' -- (7252 x 1)
+* 'X_test.txt'  --  (2947 x 561)
+* 'y_test.txt' -- (2947 x 1)
+* 'subject_test.txt' -- (2947 x 1)
 
 Subjects and activity labels were recorded in separate files:
 
@@ -70,7 +70,9 @@ subjects <- rbind(subject.train, subject.test)
 
 
 ***
-My assesment was that the variable names **(features$V2)** were sufficiently descriptive and the only thing needed was the elimination of parentheses. To further ensure that the column names will not create problems in R, I used the `make.names` function. Another transformation in this step was to rename column headers with "meanFreq" string pattern to enable the easier subsetting/elimination later with the `grep` function:
+My assesment was that the variable names **(features$V2)** were sufficiently descriptive and the only thing needed was the elimination of parentheses. My personal preference goes to "camel naming" instead of all lowercase variable names, for legibility reasons. To further ensure that the column names will not create problems in R, I used the `make.names` function. 
+
+Since the general consensus seems to be that the features with "meanFreq" should be excluded, another transformation in this step was to rename column headers with "meanFreq" string pattern to enable the easier subsetting/elimination later with the `grep` function:
 
 ```{r}
 features$V2 <- gsub("meanFreq", "mF", features$V2)
