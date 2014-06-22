@@ -7,14 +7,19 @@ The purpose of the project is to demonstrate the ability to collect, work with, 
 
 ##### This repo contains 4 files:
 
-* ReadMe.md (this document)
+* README.md (this document)
 * Samsung_final_tidy_data.txt (the resulting tidy dataset)
 * CodeBook.md (description of the variables in the resulting tidy dataset)
 * run_analysis.R (R script that perfoms the tidying)
 
 ##### Structure of the raw data
 
-A series of measurements from 30 subjects while performing 6 different activities were captured and 561 features (variables) were recorded in the following 6 files:
+For the detailes about the raw data and their collection check the **Center for Machine Learning and Intelligent Systems** website:
+http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
+
+
+***
+A series of measurements from 30 subjects while performing 6 different activities were captured, and 561 features (variables) were recorded in the following 6 files:
 
 * 'X_train.txt'  -- (7352 x 561) numerical feature variable vectors
 * 'y_train.txt'  -- (7352 x 1) activity labels, coded numerically
@@ -28,7 +33,7 @@ Subjects and activity labels were recorded in separate files:
 * features.txt
 * activity_labels.txt
 
- 
+*** 
 ##### R script **run_analysis.R** assumes that:
 
 1. The raw data file has been downloaded from: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
@@ -38,12 +43,12 @@ Subjects and activity labels were recorded in separate files:
 3. Working directory contains the **'run_analysis.R'** file and the folder **UCIHAR** with its original folder structure and all the raw .txt files
 
 ***
-#### How does the script tidy the raw data?
+#### How does the R script tidy the raw data?
 
 ***
 Read the raw text files with the ``read.table`` function:
 
-```
+```{r}
 features <- read.table("UCIHAR/features.txt")    
 subject.train <- read.table("UCIHAR/train/subject_train.txt")    
 X.train <- read.table("UCIHAR/train/X_train.txt")    
